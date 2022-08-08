@@ -1,0 +1,43 @@
+@import 'colors';
+
+.pomodoro-app{
+    width: 30rem;
+    margin: 0 auto;
+}
+
+.controles > button{
+    width: 6rem;
+}
+
+@keyframes clock-animation {
+    0%, 100%{
+        border-color: transparent $tomato transparent transparent;
+    }
+    25%{
+        border-color: transparent transparent $tomato transparent;
+    }
+    50%{
+        border-color: transparent transparent transparent $tomato;
+    }
+    75%{
+        border-color: $tomato transparent transparent transparent;
+    }
+}
+
+.clock{
+    overflow: hidden;
+    margin: 0 auto;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: .4rem solid $tomato;
+    border-color:  $tomato transparent transparent transparent;
+}
+
+.clock-running{
+    animation: clock-animation 3s infinite;
+}
+
+#timer-text{
+    margin: 0;
+}
