@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
-const bell = require('../media/bell.mp3');
 
 const Timer = ({ time, isRunning }) => {
     const minutes = Math.floor(time/60);
     const seconds = time%60;
     useEffect(() => {
       if( time === 0 && !isRunning ){
-        const audio = new Audio(bell);
+        const audio = new Audio("https://github.com/im-tower/simple-pomodoro/blob/main/src/media/bell.mp3");
         audio.play();
       }
     }, [time, isRunning]);
